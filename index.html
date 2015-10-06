@@ -1,14 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang='en' ng-app='dotaDraft'>
     <head>
         <meta charset="utf-8">
         <title>DOTA Drafter</title>
 
+        <script src="lib/angular.js"></script>
+        <script src="lib/angular-ui-router.js"></script>
+        <script src="app.js"></script>
+
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel='stylesheet' href='css/styles.css'>
     </head>
 
 
     <body>
+        <div class='container'>
+            <div ui-view='header'></div>
+
+            <div ui-view='str-heroes'></div>
+            <div ui-view='agi-heroes'></div>
+            <div ui-view='int-heroes'></div>
+
+        </div>
 
     </body>
 </html>

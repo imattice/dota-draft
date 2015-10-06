@@ -1,0 +1,28 @@
+.hero_portriat {
+    height: auto;
+    width: 100%;
+    margin: .25%;
+    border: 1.5px solid black;
+    overflow: hidden;
+}
+
+.portriat-resize {
+    padding: .25%;
+}
+
+.page-header {
+    display:inline-block;
+    position:relative;
+    background-color: white;
+}
+
+.searchbar {
+    display: inline;
+    position:relative;
+    float: right;
+}
+
+/*.title {
+    position:relative;
+    float: left;
+}*/
