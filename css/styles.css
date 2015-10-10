@@ -4,10 +4,11 @@
     margin: .25%;
     border: 1.5px solid black;
     overflow: hidden;
+    box-shadow: 5px 5px 5px black;
 }
 
 .portriat-resize {
-    padding: .25%;
+    padding: 1%;
 }
 
 .header {
