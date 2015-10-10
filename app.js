@@ -7,21 +7,16 @@ dotaDraft.config(function($stateProvider, $urlRouterProvider){
             'header': {
                 templateUrl:'partials/header.html',
             },
-            'str-heroes': {
+            'heroes': {
                 url: '',
-                templateUrl:'partials/str_heroes.html',
+                templateUrl:'partials/heroes.html',
                 contoller: 'HeroesCtrl',
             },
-            'agi-heroes': {
+            'sidebar': {
                 url: '',
-                templateUrl:'partials/agi_heroes.html',
-                contoller: 'HeroesCtrl',
+                templateUrl: 'partials/team_builder_sidebar.html',
+                // controller: 'HeroesCtrl',
             },
-            'int-heroes': {
-                url: '',
-                templateUrl:'partials/int_heroes.html',
-                contoller: 'HeroesCtrl',
-            }
         }
     });
 });
