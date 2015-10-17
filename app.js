@@ -10,13 +10,13 @@ dotaDraft.config(function($stateProvider, $urlRouterProvider){
             'heroes': {
                 url: '',
                 templateUrl:'partials/heroes.html',
-                contoller: 'HeroesCtrl',
+                controller: 'HeroesCtrl',
             },
-            'sidebar': {
-                url: '',
-                templateUrl: 'partials/team_builder_sidebar.html',
-                // controller: 'HeroesCtrl',
-            },
+            // 'sidebar': {
+            //     url: '',
+            //     templateUrl: 'partials/team_builder_sidebar.html',
+            //     // controller: 'HeroesCtrl',
+            // },
         }
     });
 });

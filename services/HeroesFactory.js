@@ -1,4 +1,4 @@
-dotaDraft.factory('dotaDraft', function HeroesFactory() {
+dotaDraft.factory('HeroesFactory', function HeroesFactory() {
     var factory = {};
     factory.strHeroes = [
         {
@@ -90,4 +90,6 @@ dotaDraft.factory('dotaDraft', function HeroesFactory() {
     factory.intHeroes = [
 
     ]
+
+    return factory;
 })

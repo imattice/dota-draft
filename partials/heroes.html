@@ -1,36 +1,39 @@
 
 <div class='container col-md-10 hero_grid'>
+    <div class = 'col-sm-2 portriat-resize' ng-repeat='hero in heroes'>
+        <div ng-if='($index + 1) === 6' class='row'>
+            <img class = 'hero_portriat' ng-src = '{{hero.portriat}}'>
+            <p class = 'hero_name'>{{hero.name}}</p>
+        </div>
+    </div>
+</div>
 
-<!-- Radient Strength Hero Portriats -->
-    <h2>Strength Heroes</h2>
-    <hr>
+
+<!-- Hero grid model -> hard-coded = yuck -->
+<h2>Strength Heroes</h2>
+<hr>
 
     <div class="row">
         <div class='col-sm-2 portriat-resize'>
-            <img class = 'hero_portriat test'
+            <img class = 'hero_portriat'
             src='../css/images/Str/Radient/Alchemist.png'>
         </div>
-
         <div class='col-sm-2 portriat-resize'>
             <img class = 'hero_portriat'
             src='../css/images/Str/Radient/Beastmaster.png'>
         </div>
-
         <div class='col-sm-2 portriat-resize'>
             <img class = 'hero_portriat'
             src='../css/images/Str/Radient/Brewmaster.png'>
         </div>
-
         <div class='col-sm-2 portriat-resize'>
             <img class = 'hero_portriat'
             src='../css/images/Str/Radient/Bristleback.png'>
         </div>
-
         <div class='col-sm-2 portriat-resize'>
             <img class = 'hero_portriat'
             src='../css/images/Str/Radient/Centaur_Warrunner.png'>
         </div>
-
         <div class='col-sm-2 portriat-resize'>
             <img class = 'hero_portriat'
             src='../css/images/Str/Radient/Clockwerk.png'>
@@ -42,27 +45,22 @@
             <img class = 'hero_portriat'
             src='../css/images/Str/Radient/Dragon_Knight.png'>
         </div>
-
         <div class='col-sm-2 portriat-resize'>
             <img class = 'hero_portriat'
             src='../css/images/Str/Radient/Earth_Spirit.png'>
         </div>
-
         <div class='col-sm-2 portriat-resize'>
             <img class = 'hero_portriat'
             src='../css/images/Str/Radient/Earthshaker.png'>
         </div>
-
         <div class='col-sm-2 portriat-resize'>
             <img class = 'hero_portriat'
             src='../css/images/Str/Radient/Huskar.png'>
         </div>
-
         <div class='col-sm-2 portriat-resize'>
             <img class = 'hero_portriat'
             src='../css/images/Str/Radient/Io.png'>
         </div>
-
         <div class='col-sm-2 portriat-resize'>
             <img class = 'hero_portriat'
             src='../css/images/Str/Radient/Kunkka.png'>
@@ -74,27 +72,22 @@
             <img class = 'hero_portriat'
             src='../css/images/Str/Radient/Legion_Commander.png'>
         </div>
-
         <div class='col-sm-2 portriat-resize'>
             <img class = 'hero_portriat'
             src='../css/images/Str/Radient/Omniknight.png'>
         </div>
-
         <div class='col-sm-2 portriat-resize'>
             <img class = 'hero_portriat'
             src='../css/images/Str/Radient/Phoenix.png'>
         </div>
-
         <div class='col-sm-2 portriat-resize'>
             <img class = 'hero_portriat'
             src='../css/images/Str/Radient/Sven.png'>
         </div>
-
         <div class='col-sm-2 portriat-resize'>
             <img class = 'hero_portriat'
             src='../css/images/Str/Radient/Timbersaw.png'>
         </div>
-
         <div class='col-sm-2 portriat-resize'>
             <img class = 'hero_portriat'
             src='../css/images/Str/Radient/Tiny.png'>
@@ -106,83 +99,73 @@
             <img class = 'hero_portriat'
             src='../css/images/Str/Radient/Treant_Protector.png'>
         </div>
-
         <div class='col-sm-2 portriat-resize'>
             <img class = 'hero_portriat'
             src='../css/images/Str/Radient/Tusk.png'>
         </div>
-    </div >
-
+    </div>
 
     <br>
 
-<!-- Dire Strength Hero Portriats -->
     <div class='row'>
         <div class='col-sm-2 portriat-resize'>
             <img class = 'hero_portriat'
             src='../css/images/Str/Dire/Abaddon.png'>
         </div>
-
         <div class='col-sm-2 portriat-resize'>
             <img class = 'hero_portriat'
             src='../css/images/Str/Dire/Axe.png'>
         </div>
-
         <div class='col-sm-2 portriat-resize'>
             <img class = 'hero_portriat'
             src='../css/images/Str/Dire/Chaos_Knight.png'>
         </div>
-
         <div class='col-sm-2 portriat-resize'>
             <img class = 'hero_portriat'
             src='../css/images/Str/Dire/Doom.png'>
         </div>
-
         <div class='col-sm-2 portriat-resize'>
             <img class = 'hero_portriat'
             src='../css/images/Str/Dire/Lifestealer.png'>
         </div>
-
         <div class='col-sm-2 portriat-resize'>
             <img class = 'hero_portriat'
             src='../css/images/Str/Dire/Lycan.png'>
         </div>
+    </div>
 
+    <div class='row'>
         <div class='col-sm-2 portriat-resize'>
             <img class = 'hero_portriat'
             src='../css/images/Str/Dire/Magnus.png'>
         </div>
-
         <div class='col-sm-2 portriat-resize'>
             <img class = 'hero_portriat'
             src='../css/images/Str/Dire/Night_Stalker.png'>
         </div>
-
         <div class='col-sm-2 portriat-resize'>
             <img class = 'hero_portriat'
             src='../css/images/Str/Dire/Pudge.png'>
         </div>
-
         <div class='col-sm-2 portriat-resize'>
             <img class = 'hero_portriat'
             src='../css/images/Str/Dire/Sand_King.png'>
         </div>
-
         <div class='col-sm-2 portriat-resize'>
             <img class = 'hero_portriat'
             src='../css/images/Str/Dire/Slardar.png'>
         </div>
-
         <div class='col-sm-2 portriat-resize'>
             <img class = 'hero_portriat'
             src='../css/images/Str/Dire/Spirit_Breaker.png'>
         </div>
+    </div>
 
+    <div class='row'>
         <div class='col-sm-2 portriat-resize'>
             <img class = 'hero_portriat'
             src='../css/images/Str/Dire/Tidehunter.png'>
         </div>
-
         <div class='col-sm-2 portriat-resize'>
             <img class = 'hero_portriat'
             src='../css/images/Str/Dire/Undying.png'>
@@ -193,392 +176,354 @@
             src='../css/images/Str/Dire/Wraith_King.png'>
         </div>
     </div>
+
     <br>
 
+<h3>Agility Heroes</h3>
+<hr>
 
-    <h3>Agility Heroes</h3>
-    <hr>
-            <div class="row">
-                <div class='col-sm-2 portriat-resize'>
-                    <img class = 'hero_portriat test'
-                    src='../css/images/Agi/Radient/Anti-Mage.png'>
-                </div>
-
-                <div class='col-sm-2 portriat-resize'>
-                    <img class = 'hero_portriat'
-                    src='../css/images/Agi/Radient/Bounty_Hunter.png'>
-                </div>
-
-                <div class='col-sm-2 portriat-resize'>
-                    <img class = 'hero_portriat'
-                    src='../css/images/Agi/Radient/Drow_Ranger.png'>
-                </div>
-
-                <div class='col-sm-2 portriat-resize'>
-                    <img class = 'hero_portriat'
-                    src='../css/images/Agi/Radient/Ember_Spirit.png'>
-                </div>
-
-                <div class='col-sm-2 portriat-resize'>
-                    <img class = 'hero_portriat'
-                    src='../css/images/Agi/Radient/Gyrocopter.png'>
-                </div>
-
-                <div class='col-sm-2 portriat-resize'>
-                    <img class = 'hero_portriat'
-                    src='../css/images/Agi/Radient/Juggernaut.png'>
-                </div>
-
-                <div class='col-sm-2 portriat-resize'>
-                    <img class = 'hero_portriat'
-                    src='../css/images/Agi/Radient/Lone_Druid.png'>
-                </div>
-
-                <div class='col-sm-2 portriat-resize'>
-                    <img class = 'hero_portriat'
-                    src='../css/images/Agi/Radient/Luna.png'>
-                </div>
-
-                <div class='col-sm-2 portriat-resize'>
-                    <img class = 'hero_portriat'
-                    src='../css/images/Agi/Radient/Mirana.png'>
-                </div>
-
-                <div class='col-sm-2 portriat-resize'>
-                    <img class = 'hero_portriat'
-                    src='../css/images/Agi/Radient/Morphling.png'>
-                </div>
-
-                <div class='col-sm-2 portriat-resize'>
-                    <img class = 'hero_portriat'
-                    src='../css/images/Agi/Radient/Naga_Siren.png'>
-                </div>
-
-                <div class='col-sm-2 portriat-resize'>
-                    <img class = 'hero_portriat'
-                    src='../css/images/Agi/Radient/Phantom_Lancer.png'>
-                </div>
-
-                <div class='col-sm-2 portriat-resize'>
-                    <img class = 'hero_portriat'
-                    src='../css/images/Agi/Radient/Riki.png'>
-                </div>
-
-                <div class='col-sm-2 portriat-resize'>
-                    <img class = 'hero_portriat'
-                    src='../css/images/Agi/Radient/Sniper.png'>
-                </div>
-                <div class='col-sm-2 portriat-resize'>
-                    <img class = 'hero_portriat'
-                    src='../css/images/Agi/Radient/Templar_Assassin.png'>
-                </div>
-
-                <div class='col-sm-2 portriat-resize'>
-                    <img class = 'hero_portriat'
-                    src='../css/images/Agi/Radient/Troll_Warlord.png'>
-                </div>
-
-                <div class='col-sm-2 portriat-resize'>
-                    <img class = 'hero_portriat'
-                    src='../css/images/Agi/Radient/Ursa.png'>
-                </div>
-
-                <div class='col-sm-2 portriat-resize'>
-                    <img class = 'hero_portriat'
-                    src='../css/images/Agi/Radient/Vengeful_Spirit.png'>
-                </div>
-            </div>
-        <br>
-
-        <!-- Dire Agility Hero Portriats -->
-            <div class='row'>
-                <div class='col-sm-2 portriat-resize'>
-                    <img class = 'hero_portriat'
-                    src='../css/images/Agi/Dire/Bloodseeker.png'>
-                </div>
-
-                <div class='col-sm-2 portriat-resize'>
-                    <img class = 'hero_portriat'
-                    src='../css/images/Agi/Dire/Broodmother.png'>
-                </div>
-
-                <div class='col-sm-2 portriat-resize'>
-                    <img class = 'hero_portriat'
-                    src='../css/images/Agi/Dire/Clinkz.png'>
-                </div>
-
-                <div class='col-sm-2 portriat-resize'>
-                    <img class = 'hero_portriat'
-                    src='../css/images/Agi/Dire/Faceless_Void.png'>
-                </div>
-
-                <div class='col-sm-2 portriat-resize'>
-                    <img class = 'hero_portriat'
-                    src='../css/images/Agi/Dire/Medusa.png'>
-                </div>
-
-                <div class='col-sm-2 portriat-resize'>
-                    <img class = 'hero_portriat'
-                    src='../css/images/Agi/Dire/Meepo.png'>
-                </div>
-
-                <div class='col-sm-2 portriat-resize'>
-                    <img class = 'hero_portriat'
-                    src='../css/images/Agi/Dire/Nyx_Assassin.png'>
-                </div>
-
-                <div class='col-sm-2 portriat-resize'>
-                    <img class = 'hero_portriat'
-                    src='../css/images/Agi/Dire/Phantom_Assassin.png'>
-                </div>
-
-                <div class='col-sm-2 portriat-resize'>
-                    <img class = 'hero_portriat'
-                    src='../css/images/Agi/Dire/Razor.png'>
-                </div>
-
-                <div class='col-sm-2 portriat-resize'>
-                    <img class = 'hero_portriat'
-                    src='../css/images/Agi/Dire/Shadow_Fiend.png'>
-                </div>
-
-                <div class='col-sm-2 portriat-resize'>
-                    <img class = 'hero_portriat'
-                    src='../css/images/Agi/Dire/Slark.png'>
-                </div>
-
-                <div class='col-sm-2 portriat-resize'>
-                    <img class = 'hero_portriat'
-                    src='../css/images/Agi/Dire/Spectre.png'>
-                </div>
-
-                <div class='col-sm-2 portriat-resize'>
-                    <img class = 'hero_portriat'
-                    src='../css/images/Agi/Dire/Terrorblade.png'>
-                </div>
-
-                <div class='col-sm-2 portriat-resize'>
-                    <img class = 'hero_portriat'
-                    src='../css/images/Agi/Dire/Venomancer.png'>
-                </div>
-
-                <div class='col-sm-2 portriat-resize'>
-                    <img class = 'hero_portriat'
-                    src='../css/images/Agi/Dire/Viper.png'>
-                </div>
-
-                <div class='col-sm-2 portriat-resize'>
-                    <img class = 'hero_portriat'
-                    src='../css/images/Agi/Dire/Weaver.png'>
-                </div>
-            </div>
-
-    <h3>Intellegence Heroes</h3>
-    <hr>
-
-    <!-- Radient Intellegence Hero Portriats -->
-        <div class="row">
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat test'
-                src='../css/images/Int/Radient/Chen.png'>
-            </div>
-
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Radient/Crystal_Maiden.png'>
-            </div>
-
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Radient/Disruptor.png'>
-            </div>
-
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Radient/Enchantress.png'>
-            </div>
-
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Radient/Jakiro.png'>
-            </div>
-
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Radient/Keeper_of_the_Light.png'>
-            </div>
-
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Radient/Lina.png'>
-            </div>
-
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Radient/Natures_Prophet.png'>
-            </div>
-
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Radient/Ogre_Magi.png'>
-            </div>
-
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Radient/Oracle.png'>
-            </div>
-
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Radient/Puck.png'>
-            </div>
-
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Radient/Rubick.png'>
-            </div>
-
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Radient/Shadow_Shaman.png'>
-            </div>
-
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Radient/Silencer.png'>
-            </div>
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Radient/Skywrath_Mage.png'>
-            </div>
-
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Radient/Storm_Spirit.png'>
-            </div>
-
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Radient/Techies.png'>
-            </div>
-
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Radient/Tinker.png'>
-            </div>
-
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Radient/Windranger.png'>
-            </div>
-
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Radient/Zeus.png'>
-            </div>
+    <div class="row">
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat test'
+            src='../css/images/Agi/Radient/Anti-Mage.png'>
         </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Agi/Radient/Bounty_Hunter.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Agi/Radient/Drow_Ranger.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Agi/Radient/Ember_Spirit.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Agi/Radient/Gyrocopter.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Agi/Radient/Juggernaut.png'>
+        </div>
+    </div>
+
+    <div class='row'>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Agi/Radient/Lone_Druid.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Agi/Radient/Luna.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Agi/Radient/Mirana.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Agi/Radient/Morphling.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Agi/Radient/Naga_Siren.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Agi/Radient/Phantom_Lancer.png'>
+        </div>
+    </div>
+
+    <div class='row'>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Agi/Radient/Riki.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Agi/Radient/Sniper.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Agi/Radient/Templar_Assassin.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Agi/Radient/Troll_Warlord.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Agi/Radient/Ursa.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Agi/Radient/Vengeful_Spirit.png'>
+        </div>
+    </div>
+
     <br>
 
-    <!-- Dire Intellegence Hero Portriats -->
-        <div class='row'>
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Dire/Ancient_Apparition.png'>
-            </div>
-
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Dire/Bane.png'>
-            </div>
-
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Dire/Batrider.png'>
-            </div>
-
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Dire/Dark_Seer.png'>
-            </div>
-
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Dire/Dazzle.png'>
-            </div>
-
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Dire/Death_Prophet.png'>
-            </div>
-
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Dire/Enigma.png'>
-            </div>
-
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Dire/Invoker.png'>
-            </div>
-
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Dire/Leshrac.png'>
-            </div>
-
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Dire/Lich.png'>
-            </div>
-
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Dire/Lion.png'>
-            </div>
-
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Dire/Necrophos.png'>
-            </div>
-
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Dire/Outworld_Devourer.png'>
-            </div>
-
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Dire/Pugna.png'>
-            </div>
-
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Dire/Queen_of_Pain.png'>
-            </div>
-
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Dire/Shadow_Demon.png'>
-            </div>
-
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Dire/Visage.png'>
-            </div>
-
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Dire/Warlock.png'>
-            </div>
-
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Dire/Winter_Wyvern.png'>
-            </div>
-
-            <div class='col-sm-2 portriat-resize'>
-                <img class = 'hero_portriat'
-                src='../css/images/Int/Dire/Witch_Doctor.png'>
-            </div>
+    <div class='row'>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Agi/Dire/Bloodseeker.png'>
         </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Agi/Dire/Broodmother.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Agi/Dire/Clinkz.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Agi/Dire/Faceless_Void.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Agi/Dire/Medusa.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Agi/Dire/Meepo.png'>
+        </div>
+    </div>
+
+    <div class='row'>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Agi/Dire/Nyx_Assassin.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Agi/Dire/Phantom_Assassin.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Agi/Dire/Razor.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Agi/Dire/Shadow_Fiend.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Agi/Dire/Slark.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Agi/Dire/Spectre.png'>
+        </div>
+    </div>
+
+    <div class='row'>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Agi/Dire/Terrorblade.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Agi/Dire/Venomancer.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Agi/Dire/Viper.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Agi/Dire/Weaver.png'>
+        </div>
+    </div>
+
+
+<h3>Intellegence Heroes</h3>
+<hr>
+    <div class="row">
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat test'
+            src='../css/images/Int/Radient/Chen.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Radient/Crystal_Maiden.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Radient/Disruptor.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Radient/Enchantress.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Radient/Jakiro.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Radient/Keeper_of_the_Light.png'>
+        </div>
+    </div>
+
+    <div class='row'>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Radient/Lina.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Radient/Natures_Prophet.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Radient/Ogre_Magi.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Radient/Oracle.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Radient/Puck.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Radient/Rubick.png'>
+        </div>
+    </div>
+
+    <div class='row'>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Radient/Shadow_Shaman.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Radient/Silencer.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Radient/Skywrath_Mage.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Radient/Storm_Spirit.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Radient/Techies.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Radient/Tinker.png'>
+        </div>
+    </div>
+
+    <div class='row'>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Radient/Windranger.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Radient/Zeus.png'>
+        </div>
+    </div>
+
+    <br>
+
+    <div class='row'>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Dire/Ancient_Apparition.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Dire/Bane.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Dire/Batrider.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Dire/Dark_Seer.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Dire/Dazzle.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Dire/Death_Prophet.png'>
+        </div>
+    </div>
+
+    <div class='row'>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Dire/Enigma.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Dire/Invoker.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Dire/Leshrac.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Dire/Lich.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Dire/Lion.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Dire/Necrophos.png'>
+        </div>
+    </div>
+
+    <div class='row'>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Dire/Outworld_Devourer.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Dire/Pugna.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Dire/Queen_of_Pain.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Dire/Shadow_Demon.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Dire/Visage.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Dire/Warlock.png'>
+        </div>
+    </div>
+
+    <div class='row'>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Dire/Winter_Wyvern.png'>
+        </div>
+        <div class='col-sm-2 portriat-resize'>
+            <img class = 'hero_portriat'
+            src='../css/images/Int/Dire/Witch_Doctor.png'>
+        </div>
+    </div>
 </div>
