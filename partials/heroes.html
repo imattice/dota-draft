@@ -1,16 +1,28 @@
-
+<!-- container for grid -->
 <div class='container col-md-10 hero_grid'>
+
+    <!-- add each hero into a seperate column.  Resizes pictures. -->
     <div class = 'col-sm-2 portriat-resize' ng-repeat='hero in heroes'>
-        <div ng-if='($index + 1) === 6' class='row'>
+
+        <!-- inserts row div every 6 pictures -->
+        <!-- <div ng-if='(($index + 1) % 6 == 0)' class='row'> -->
+        <!-- add class row in jQuery? -->
+
+            <!-- hero picture -->
             <img class = 'hero_portriat' ng-src = '{{hero.portriat}}'>
+            <!-- hero name -->
             <p class = 'hero_name'>{{hero.name}}</p>
+
+
+
+
         </div>
     </div>
 </div>
 
 
 <!-- Hero grid model -> hard-coded = yuck -->
-<h2>Strength Heroes</h2>
+<!-- <h2>Strength Heroes</h2>
 <hr>
 
     <div class="row">
@@ -526,4 +538,4 @@
             src='../css/images/Int/Dire/Witch_Doctor.png'>
         </div>
     </div>
-</div>
+</div> -->

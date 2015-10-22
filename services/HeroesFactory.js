@@ -1,6 +1,6 @@
 dotaDraft.factory('HeroesFactory', function HeroesFactory() {
     var factory = {};
-    factory.strHeroes = [
+    factory.radientStrHeroes = [
         {
             name: 'Alchemist',
             portriat: '../css/images/Str/Radient/Alchemist.png',
@@ -83,13 +83,11 @@ dotaDraft.factory('HeroesFactory', function HeroesFactory() {
         },
     ]
 
-    factory.agiHeroes = [
-
-    ]
-
-    factory.intHeroes = [
-
-    ]
+    factory.direStrHeroes = []
+    factory.radientAgiHeroes = []
+    factory.direAgiHeroes = []
+    factory.radientIntHeroes = []
+    factory.direIntHeroes = []
 
     return factory;
 })
