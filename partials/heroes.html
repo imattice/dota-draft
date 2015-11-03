@@ -6,23 +6,26 @@
 
         <!-- add each hero into a seperate column.  Resizes pictures. -->
         <div class = 'col-sm-2 portriat-resize' ng-repeat='hero in radientStrHeroes'>
-
-            <!-- inserts row div every 6 pictures -->
-            <!-- <div ng-if='(($index + 1) % 6 == 0)' class='row'> -->
-            <!-- add class row in jQuery? -->
-
-                <!-- hero picture -->
-                <img class = 'hero_portriat' ng-src = '{{hero.portriat}}'>
-                <!-- hero name -->
-                <p class = 'hero_name'>{{hero.name}}</p>
-
+            <!-- placeholder so the grid does not move on animation -->
+            <div class = 'hero_placeholder'>
+                <!-- groups the name and the picture together -->
+                <div class = 'hero_container' ng-click = 'showProfile' grow>
+                    <!-- hero picture -->
+                    <img class = 'hero_portriat' ng-src = '{{ hero.portriat }}'>
+                    <!-- hero name -->
+                    <p class = 'hero_name'>{{ hero.name }}</p>
+                </div>
+            </div>
         </div>
     </div>
+
+    <div class = 'hero_profile'>{{ hero.name }}</div>
+
 <!-- Dire Strength -->
     <div class='container col-md-10 hero_grid'>
         <div class = 'col-sm-2 portriat-resize' ng-repeat='hero in direStrHeroes'>
-                <img class = 'hero_portriat' ng-src = '{{hero.portriat}}'>
-                <p class = 'hero_name'>{{hero.name}}</p>
+                <img class = 'hero_portriat' ng-src = '{{ hero.portriat }}'>
+                <p class = 'hero_name'>{{ hero.name }}</p>
         </div>
     </div>
 
@@ -31,15 +34,15 @@
         <h3>Agility Heroes</h3>
         <hr>
         <div class = 'col-sm-2 portriat-resize' ng-repeat='hero in radientAgiHeroes'>
-                <img class = 'hero_portriat' ng-src = '{{hero.portriat}}'>
-                <p class = 'hero_name'>{{hero.name}}</p>
+                <img class = 'hero_portriat' ng-src = '{{ hero.portriat }}'>
+                <p class = 'hero_name'>{{ hero.name }}</p>
         </div>
     </div>
 <!-- Dire Agility -->
     <div class='container col-md-10 hero_grid'>
         <div class = 'col-sm-2 portriat-resize' ng-repeat='hero in direAgiHeroes'>
-                <img class = 'hero_portriat' ng-src = '{{hero.portriat}}'>
-                <p class = 'hero_name'>{{hero.name}}</p>
+                <img class = 'hero_portriat' ng-src = '{{ hero.portriat }}'>
+                <p class = 'hero_name'>{{ hero.name }}</p>
         </div>
     </div>
 
@@ -48,14 +51,14 @@
         <h3>Intellegence Heroes</h3>
         <hr>
         <div class = 'col-sm-2 portriat-resize' ng-repeat='hero in radientIntHeroes'>
-                <img class = 'hero_portriat' ng-src = '{{hero.portriat}}'>
-                <p class = 'hero_name'>{{hero.name}}</p>
+                <img class = 'hero_portriat' ng-src = '{{ hero.portriat }}'>
+                <p class = 'hero_name'>{{ hero.name }}</p>
         </div>
     </div>
     <!-- Dire Intellegence -->
     <div class='container col-md-10 hero_grid'>
         <div class = 'col-sm-2 portriat-resize' ng-repeat='hero in direIntHeroes'>
-                <img class = 'hero_portriat' ng-src = '{{hero.portriat}}'>
-                <p class = 'hero_name'>{{hero.name}}</p>
+                <img class = 'hero_portriat' ng-src = '{{ hero.portriat }}'>
+                <p class = 'hero_name'>{{ hero.name }}</p>
         </div>
     </div>

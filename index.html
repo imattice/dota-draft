@@ -6,26 +6,25 @@
 
         <script src='lib/angular.js'></script>
         <script src='lib/angular-ui-router.js'></script>
-        <script src='jquery-2.1.4.js'></script>
+        <script src='lib/jquery-2.1.4.js'></script>
+        <script src='js/scripts.js'></script>
         <script src='app.js'></script>
 
         <script src='services/HeroesFactory.js'></script>
         <script src='controllers/HeroesController.js'></script>
 
+        <script src='directives/customDirectives.js'></script>
+
         <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
         <link rel='stylesheet' href='css/styles.css'>
     </head>
 
-
     <body>
         <div class='container'>
             <div ui-view='header'></div>
-
             <div ui-view='heroes'></div>
-
             <!-- <div ui-view='sidebar'></div> -->
-
         </div>
-
     </body>
+
 </html>

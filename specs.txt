@@ -1,0 +1,15 @@
+- On hover over portrait, hero picture slightly grows
+
+- On click, portrait will flip to show backside, which holds information
+    - backside of portrait width will grow to fill screen and is fixed so you can see hero grid behind, but grid is disabled
+    - background will fade and blur
+
+-On double click, adds hero to sidebar
+
+- User can click an X to remove a hero from the sidebar
+
+-Actively lists common weaknesses and strengths at bottom of sidebar as user adds or removes heros from sidebar
+
+-searchbar effects
+    -when search is selected, dim all heroes in grid
+    -As user types in letters, light up hero that matches that search result
