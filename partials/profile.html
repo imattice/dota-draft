@@ -1,0 +1,25 @@
+<div id='profile_container' ng-show='profileVisible'>
+    <div id = 'hero_profile'>
+
+        <img id='profile_gif' ng-src='{{ hero.gif }}'>
+        <h1 id='profile_name'>{{ hero.name }}</h1>
+        <ul id='profile_roles' ng-repeat='role in roles'>
+            <li>{{ hero.role }}</li>
+        </ul>
+        <hr>
+
+        <p id='playstyle'>
+            {{ hero.playstyle }}
+        </p>
+        <hr>
+        <ul id='profile_strengths' ng-repeat='strength in strengths'>
+            <li>{{ hero.strength }}</li>
+        </ul>
+        <hr>
+        <ul id='profile_weaknesses' ng-repeat='weakness in weaknesses'>
+            <li>{{ hero.weakness }}</li>
+        </ul>
+
+
+    </div>
+</div>

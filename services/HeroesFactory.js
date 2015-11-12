@@ -4,6 +4,21 @@ dotaDraft.factory('HeroesFactory', function HeroesFactory() {
         {
             name: 'Alchemist',
             portriat: '../css/images/Str/Radient/Alchemist.png',
+            gif: '',
+            roles: [
+                'Carry',
+                'Durable',
+            ],
+            playstyle: 'Alchemist farms items for other heroes.',
+            strengths: [
+                'Difficult to kill',
+                'Farms quickly',
+            ],
+            weaknesses: [
+                'Ancient Apparition: Ice Blast',
+                'Stun',
+            ],
+            showProfile: false,
         },
         {
             name: 'Beastmaster',

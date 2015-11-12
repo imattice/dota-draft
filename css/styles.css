@@ -75,20 +75,24 @@
         cursor:pointer;
         background-color: black;
         margin: 0;
-       }
+    }
 
+    #profile_container {
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+    }
        /*div that holds all profile information*/
-       .hero_profile {
-           width: 96%;
-           height: 70%;
-           vertical-align: middle;
-           position: fixed;
-           margin-left: 1%;
-           margin-top: 100px;
-
-           background-color: white;
-           z-index: 6
-       }
+    #hero_profile {
+       height: 96%;
+       width: 70%;
+       vertical-align: middle;
+       margin-left: 1%;
+       position: fixed;
+       background-color: white;
+       z-index: 6;
+       border-radius: 5px;
+    }
 
     /*.sidebar {
         position:fixed;

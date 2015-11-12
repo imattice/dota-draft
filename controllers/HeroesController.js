@@ -11,5 +11,14 @@ dotaDraft.controller('HeroesCtrl', function HeroesCtrl($scope, HeroesFactory) {
     $scope.radientIntHeroes = HeroesFactory.radientIntHeroes;
     $scope.direIntHeroes = HeroesFactory.direIntHeroes;
 
-    // console.log('heroes' + $scope.heroes);
+//shows profile on portriat click
+    $scope.profileVisible = false;
+
+    $scope.openProfile = function() {
+        $scope.profileVisible = true;
+    };
+
+    $scope.closeProfile = function() {
+        $scope.profileVisible = false;
+    };
 })

@@ -12,11 +12,13 @@ dotaDraft.directive('grow', function() {
     }
 });
 
-// dotaDraft.directive('viewProfile', function() {
+// dotaDraft.directive('viewProfile', function(hero) {
 //     return {
 //         link:
-//         function(scope, element, attrs) {
-//             element.bind('click', function)
+//         function(scope, element, attrs, hero) {
+//             element.bind('click', function(){
+//                 hero.viewProfile == true;
+//             })
 //         }
 //     }
 // })
