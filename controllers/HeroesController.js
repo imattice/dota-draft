@@ -14,8 +14,9 @@ dotaDraft.controller('HeroesCtrl', function HeroesCtrl($scope, HeroesFactory) {
 //shows profile on portriat click
     $scope.profileVisible = false;
 
-    $scope.openProfile = function() {
+    $scope.openProfile = function(hero) {
         $scope.profileVisible = true;
+        $scope.selectedHero = hero;
     };
 
     $scope.closeProfile = function() {

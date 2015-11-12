@@ -9,7 +9,7 @@
             <!-- placeholder so the grid does not move on animation -->
             <div class = 'hero_placeholder'>
                 <!-- groups the name and the picture together -->
-                <div class = 'hero_container' ng-click='openProfile()' grow>
+                <div class = 'hero_container' ng-click='openProfile(hero)' grow>
                     <!-- hero picture -->
                     <img class = 'hero_portriat' ng-src = '{{ hero.portriat }}'>
                     <!-- hero name -->
@@ -61,27 +61,30 @@
         </div>
     </div>
 
-    <!-- <div class = 'hero_profile'>{{ hero.name }}</div> -->
+
+
+
+<!-- <div class = 'hero_profile'>{{ hero.name }}</div> -->
     <div id='profile_container' ng-show='profileVisible'>
         <div id = 'hero_profile'>
             <h2><a href="#" ng-click='closeProfile()'> X </a></h2>
-            <img id='profile_gif' ng-src='{{ hero.gif }}'>
-            <h1 id='profile_name'>{{ hero.name }}</h1>
-            <ul id='profile_roles' ng-repeat='role in roles'>
-                <li>{{ hero.role }}</li>
+            <img id='profile_gif' ng-src='{{ selectedHero.portriat }}'>
+            <h1 id='profile_name'>{{ selectedHero.name }}</h1>
+            <ul id='profile_roles' ng-repeat='role in selectedHero.roles'>
+                <li>{{ role }}</li>
             </ul>
             <hr>
 
             <p id='playstyle'>
-                {{ hero.playstyle }}
+                {{ selectedHero.playstyle }}
             </p>
             <hr>
-            <ul id='profile_strengths' ng-repeat='strength in strengths'>
-                <li>{{ hero.strength }}</li>
+            <ul id='profile_strengths' ng-repeat='strength in selectedHero.strengths'>
+                <li>{{ strength }}</li>
             </ul>
             <hr>
-            <ul id='profile_weaknesses' ng-repeat='weakness in weaknesses'>
-                <li>{{ hero.weakness }}</li>
+            <ul id='profile_weaknesses' ng-repeat='weakness in selectedHero.weaknesses'>
+                <li>{{ weakness }}</li>
             </ul>
 
 
