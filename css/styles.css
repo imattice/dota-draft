@@ -92,8 +92,40 @@
        background-color: white;
        z-index: 6;
        border-radius: 5px;
+       padding: 1em;
     }
 
+    #profile_name {
+        display: inline;
+    }
+
+    #profile_portriat {
+        display: inline;
+        float: right;
+        position: relative;
+    }
+
+    #profile_roles {
+        display:inline-block;
+        list-style: none;
+    }
+
+    #close_profile {
+        height: 30px;
+        width: 30px;
+        /*margin-left: 5em;
+        margin-bottom: 2em;*/
+        font-size: 16px;
+        border: 2px solid black;
+        border-radius: 50%;
+        /*align-items: center;*/
+        /*justify-content: center;*/
+        text-align: center;
+        vertical-align: middle;
+        float: right;
+        z-index: 55;
+        position:relative;
+   }
     /*.sidebar {
         position:fixed;
         float: left;

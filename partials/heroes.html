@@ -67,9 +67,10 @@
 <!-- <div class = 'hero_profile'>{{ hero.name }}</div> -->
     <div id='profile_container' ng-show='profileVisible'>
         <div id = 'hero_profile'>
-            <h2><a href="#" ng-click='closeProfile()'> X </a></h2>
-            <img id='profile_gif' ng-src='{{ selectedHero.portriat }}'>
+            <div id='close_profile' ng-click='closeProfile()'><a href="#"> X </a></div>
+            <img id='profile_portriat' ng-src='{{ selectedHero.portriat }}'>
             <h1 id='profile_name'>{{ selectedHero.name }}</h1>
+            <br />
             <ul id='profile_roles' ng-repeat='role in selectedHero.roles'>
                 <li>{{ role }}</li>
             </ul>
