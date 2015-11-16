@@ -1,4 +1,9 @@
 dotaDraft.controller('HeroesCtrl', function HeroesCtrl($scope, HeroesFactory) {
+    $scope.searchActive = false;
+    // $scope.saturate = function(){
+    //     $scope.
+    // }
+
     $scope.strHeroes = HeroesFactory.strHeroes;
     $scope.HeroesFactory = HeroesFactory;
 
@@ -16,6 +21,7 @@ dotaDraft.controller('HeroesCtrl', function HeroesCtrl($scope, HeroesFactory) {
 
     $scope.openProfile = function(hero) {
         $scope.profileVisible = true;
+
         $scope.selectedHero = hero;
     };
 

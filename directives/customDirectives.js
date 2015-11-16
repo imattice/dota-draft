@@ -12,13 +12,26 @@ dotaDraft.directive('grow', function() {
     }
 });
 
-// dotaDraft.directive('viewProfile', function(hero) {
+dotaDraft.directive('desaturate', function() {
+    return {
+        link:
+            function(scope, element, attrs){
+                element.bind('click', function() {
+                    //will not work without jQuery loaded before angular.  Cannoy look up elements with jqLite
+                    angular.element('.hero_container').addClass('desaturated');
+                });
+            }
+    }
+});
+
+// dotaDraft.directive('resaturate', function() {
 //     return {
 //         link:
-//         function(scope, element, attrs, hero) {
-//             element.bind('click', function(){
-//                 hero.viewProfile == true;
-//             })
-//         }
+//             function(scope, element, attrs){
+//                 element.bind('click', function() {
+//                     //will not work without jQuery loaded before angular.  Cannoy look up elements with jqLite
+//                     angular.element('.hero_container').removeClass('desaturated');
+//                 });
+//             }
 //     }
-// })
+// });

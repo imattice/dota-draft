@@ -6,6 +6,7 @@ dotaDraft.config(function($stateProvider, $urlRouterProvider){
         views: {
             'header': {
                 templateUrl:'partials/header.html',
+                controller: 'HeroesCtrl',
             },
             'heroes': {
                 url: '',

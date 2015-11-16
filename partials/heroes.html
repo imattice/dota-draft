@@ -1,3 +1,11 @@
+<div class='header navbar navbar-default navbar-fixed-top'>
+    <center><h1 class='title'>DOTA 2 Drafter</h1></center>
+    <input class='searchbar form-control' type='text' placeholder="Search" desaturate>
+</div>
+
+<br>
+<hr>
+
 <!-- Radient Strength -->
     <!-- container for grid -->
     <div class='container col-md-10 hero_grid'>
@@ -9,7 +17,7 @@
             <!-- placeholder so the grid does not move on animation -->
             <div class = 'hero_placeholder'>
                 <!-- groups the name and the picture together -->
-                <div class = 'hero_container' ng-click='openProfile(hero)' grow>
+                <div class = 'hero_container' ng-class='{desaturated: desaturated}' ng-click='openProfile(hero)' grow>
                     <!-- hero picture -->
                     <img class = 'hero_portriat' ng-src = '{{ hero.portriat }}'>
                     <!-- hero name -->
@@ -66,28 +74,33 @@
 
 <!-- <div class = 'hero_profile'>{{ hero.name }}</div> -->
     <div id='profile_container' ng-show='profileVisible'>
-        <div id = 'hero_profile'>
-            <div id='close_profile' ng-click='closeProfile()'><a href="#"> X </a></div>
+        <div id = 'hero_profile' class='col-md-10'>
+            <div id='close_profile' ng-click='closeProfile()'></div>
+
             <img id='profile_portriat' ng-src='{{ selectedHero.portriat }}'>
             <h1 id='profile_name'>{{ selectedHero.name }}</h1>
             <br />
+
             <ul id='profile_roles' ng-repeat='role in selectedHero.roles'>
                 <li>{{ role }}</li>
             </ul>
             <hr>
 
+            <h3  class='profile_title'>Playstyle</h3>
             <p id='playstyle'>
                 {{ selectedHero.playstyle }}
             </p>
             <hr>
+
+            <h3 class='profile_title'>Strengths</h3>
             <ul id='profile_strengths' ng-repeat='strength in selectedHero.strengths'>
-                <li>{{ strength }}</li>
+                <li class='quality'><img class='icon' ng-src='{{ strength.icon }}'> - {{ strength.title }}</li>
             </ul>
             <hr>
+
+            <h3 class='profile_title'>Weaknesses</h3>
             <ul id='profile_weaknesses' ng-repeat='weakness in selectedHero.weaknesses'>
-                <li>{{ weakness }}</li>
+                <li class='quality'><img class='icon' ng-src='{{ weakness.icon }}'> - {{ weakness.title }}</li>
             </ul>
-
-
         </div>
     </div>
