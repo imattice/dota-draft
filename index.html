@@ -19,10 +19,10 @@
         <link rel='stylesheet' href='css/styles.css'>
     </head>
 
-    <body resaturate>
-        <div class='container' ng-click='closeProfile()'>
-            <div ui-view='header'></div>
-            <div ui-view='heroes'></div>
+    <body>
+        <div class='container'>
+            <div ui-view='header'  ng-click='closeProfile()'></div>
+            <div ui-view='heroes' resaturate></div>
             <!-- <div ui-view='sidebar'></div> -->
             <!-- <div ui-view='profile'></div> -->
         </div>

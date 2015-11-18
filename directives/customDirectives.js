@@ -24,14 +24,14 @@ dotaDraft.directive('desaturate', function() {
     }
 });
 
-// dotaDraft.directive('resaturate', function() {
-//     return {
-//         link:
-//             function(scope, element, attrs){
-//                 element.bind('click', function() {
-//                     //will not work without jQuery loaded before angular.  Cannoy look up elements with jqLite
-//                     angular.element('.hero_container').removeClass('desaturated');
-//                 });
-//             }
-//     }
-// });
+dotaDraft.directive('resaturate', function() {
+    return {
+        link:
+            function(scope, element, attrs){
+                element.bind('click', function() {
+                    //will not work without jQuery loaded before angular.  Cannoy look up elements with jqLite
+                    angular.element('.hero_container').removeClass('desaturated');
+                });
+            }
+    }
+});
