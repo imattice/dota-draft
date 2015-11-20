@@ -1,63 +1,73 @@
-<!-- Radient Strength -->
-    <!-- container for grid -->
-    <div class='container hero_grid'>
-        <h2>Strength Heroes</h2>
-        <hr>
+<!--  Strength -->
+        <div id='strength_heroes'>
+    <!-- Radient -->
+        <!-- container for grid -->
+            <div class='hero_grid'>
+                <h2 class='grid_title'>Strength Heroes</h2>
+                <hr>
 
-        <!-- add each hero into a seperate column.  Resizes pictures. -->
-        <div class = 'col-sm-2 portriat-resize' ng-repeat='hero in radientStrHeroes'>
-            <!-- placeholder so the grid does not move on animation -->
-            <div class = 'hero_placeholder'>
-                <!-- groups the name and the picture together -->
-                <div class = 'hero_container' ng-click='openProfile(hero)' grow>
-                    <!-- hero picture -->
-                    <img class = 'hero_portriat' ng-src = '{{ hero.portriat }}'>
-                    <!-- hero name -->
-                    <p class = 'hero_name'>{{ hero.name }}</p>
+                <!-- add each hero into a seperate column.  Resizes pictures. -->
+                <div class = 'col-sm-2 portriat-resize' ng-class='{ desaturated: profileVisible}' ng-repeat='hero in radientStrHeroes'>
+                    <!-- placeholder so the grid does not move on animation -->
+                    <div class = 'hero_placeholder'>
+                        <!-- groups the name and the picture together -->
+                        <div class = 'hero_container' ng-click='openProfile(hero)' grow>
+                            <!-- hero picture -->
+                            <img class = 'hero_portriat' ng-src = '{{ hero.portriat }}'>
+                            <!-- hero name -->
+                            <p class = 'hero_name'>{{ hero.name }}</p>
+                        </div>
+                    </div>
                 </div>
+            </div>
+            <br />
+
+    <!-- Dire  -->
+            <div class='container col-md-10 hero_grid'>
+                <div class = 'col-sm-2 portriat-resize' ng-repeat='hero in direStrHeroes'>
+                        <img class = 'hero_portriat' ng-src = '{{ hero.portriat }}'>
+                        <p class = 'hero_name'>{{ hero.name }}</p>
+                </div>
+            </div>
+        </div>
+
+<!-- Agility -->
+    <div id='agility_heroes'>
+    <!-- Radient -->
+        <div class='container col-md-10 hero_grid'>
+            <h2 class='grid_title'>Agility Heroes</h2>
+            <hr>
+            <div class = 'col-sm-2 portriat-resize' ng-repeat='hero in radientAgiHeroes'>
+                    <img class = 'hero_portriat' ng-src = '{{ hero.portriat }}'>
+                    <p class = 'hero_name'>{{ hero.name }}</p>
+            </div>
+        </div>
+    <!-- Dire  -->
+        <div class='container col-md-10 hero_grid'>
+            <div class = 'col-sm-2 portriat-resize' ng-repeat='hero in direAgiHeroes'>
+                    <img class = 'hero_portriat' ng-src = '{{ hero.portriat }}'>
+                    <p class = 'hero_name'>{{ hero.name }}</p>
             </div>
         </div>
     </div>
 
-<!-- Dire Strength -->
-    <div class='container col-md-10 hero_grid'>
-        <div class = 'col-sm-2 portriat-resize' ng-repeat='hero in direStrHeroes'>
-                <img class = 'hero_portriat' ng-src = '{{ hero.portriat }}'>
-                <p class = 'hero_name'>{{ hero.name }}</p>
+<!-- Intellegence -->
+    <div id='intellegence_heroes'>
+    <!-- Radient -->
+        <div class='container col-md-10 hero_grid'>
+            <h2 class='grid_title'>Intellegence Heroes</h2>
+            <hr>
+            <div class = 'col-sm-2 portriat-resize' ng-repeat='hero in radientIntHeroes'>
+                    <img class = 'hero_portriat' ng-src = '{{ hero.portriat }}'>
+                    <p class = 'hero_name'>{{ hero.name }}</p>
+            </div>
         </div>
-    </div>
-
-<!-- Radient Agility -->
-    <div class='container col-md-10 hero_grid'>
-        <h3>Agility Heroes</h3>
-        <hr>
-        <div class = 'col-sm-2 portriat-resize' ng-repeat='hero in radientAgiHeroes'>
-                <img class = 'hero_portriat' ng-src = '{{ hero.portriat }}'>
-                <p class = 'hero_name'>{{ hero.name }}</p>
-        </div>
-    </div>
-<!-- Dire Agility -->
-    <div class='container col-md-10 hero_grid'>
-        <div class = 'col-sm-2 portriat-resize' ng-repeat='hero in direAgiHeroes'>
-                <img class = 'hero_portriat' ng-src = '{{ hero.portriat }}'>
-                <p class = 'hero_name'>{{ hero.name }}</p>
-        </div>
-    </div>
-
-<!-- Radient Intellegence -->
-    <div class='container col-md-10 hero_grid'>
-        <h3>Intellegence Heroes</h3>
-        <hr>
-        <div class = 'col-sm-2 portriat-resize' ng-repeat='hero in radientIntHeroes'>
-                <img class = 'hero_portriat' ng-src = '{{ hero.portriat }}'>
-                <p class = 'hero_name'>{{ hero.name }}</p>
-        </div>
-    </div>
-    <!-- Dire Intellegence -->
-    <div class='container col-md-10 hero_grid'>
-        <div class = 'col-sm-2 portriat-resize' ng-repeat='hero in direIntHeroes'>
-                <img class = 'hero_portriat' ng-src = '{{ hero.portriat }}'>
-                <p class = 'hero_name'>{{ hero.name }}</p>
+    <!-- Dire  -->
+        <div class='container col-md-10 hero_grid'>
+            <div class = 'col-sm-2 portriat-resize' ng-repeat='hero in direIntHeroes'>
+                    <img class = 'hero_portriat' ng-src = '{{ hero.portriat }}'>
+                    <p class = 'hero_name'>{{ hero.name }}</p>
+            </div>
         </div>
     </div>
 
@@ -70,17 +80,19 @@
             <div id='close_profile' ng-click='closeProfile()'></div>
 
             <img id='profile_portriat' ng-src='{{ selectedHero.portriat }}'>
-            <h1 id='profile_name'>
-                {{ selectedHero.name }}
-            </h1>
-            <br />
+            <div id='profile_title'>
+                <h1 id='profile_name'>
+                    {{ selectedHero.name }}
+                </h1>
+                <br />
 
-            <ul id='profile_roles' ng-repeat='role in selectedHero.roles'>
-                <li>
-                    {{ role }}
-                </li>
-            </ul>
-            <hr>
+                <ul id='profile_roles' ng-repeat='role in selectedHero.roles'>
+                    <li>
+                        {{ role }}
+                    </li>
+                </ul>
+                <hr>
+            </div>
 
             <h3  class='profile_title'>
                 Playstyle

@@ -1,8 +1,8 @@
 dotaDraft.controller('HeroesCtrl', function HeroesCtrl($scope, HeroesFactory) {
 
-    $scope.strHeroes = HeroesFactory.strHeroes;
-    $scope.HeroesFactory = HeroesFactory;
-
+    // $scope.strHeroes = HeroesFactory.strHeroes;
+    // $scope.HeroesFactory = HeroesFactory;
+    
     $scope.radientStrHeroes = HeroesFactory.radientStrHeroes;
     $scope.direStrHeroes = HeroesFactory.direStrHeroes;
 
@@ -12,24 +12,27 @@ dotaDraft.controller('HeroesCtrl', function HeroesCtrl($scope, HeroesFactory) {
     $scope.radientIntHeroes = HeroesFactory.radientIntHeroes;
     $scope.direIntHeroes = HeroesFactory.direIntHeroes;
 
-//shows profile on portriat click
+    //sets hero profile as hidden, initially
     $scope.profileVisible = false;
 
+    //shows hidden profile
     $scope.openProfile = function(hero) {
         $scope.profileVisible = true;
 
         $scope.selectedHero = hero;
     };
 
+    //hides hero profile
     $scope.closeProfile = function() {
         $scope.profileVisible = false;
     };
 
-    $scope.hideDescription = function() {
-        $scope.description = false;
-    };
-
+    //shows description of item
     $scope.showDescription = function() {
         $scope.description = true;
     };
 })
+    //hides description of item
+    $scope.hideDescription = function() {
+        $scope.description = false;
+    };

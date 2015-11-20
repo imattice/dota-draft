@@ -32,7 +32,7 @@ dotaDraft.factory('HeroesFactory', function HeroesFactory() {
             portriat: '../css/images/Str/Radient/Bristleback.png',
         },
         {
-            name: 'Centaur_Warrunner',
+            name: 'Centaur Warrunner',
             portriat: '../css/images/Str/Radient/Centaur_Warrunner.png',
         },
         {
