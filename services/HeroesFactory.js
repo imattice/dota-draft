@@ -18,6 +18,12 @@ dotaDraft.factory('HeroesFactory', function HeroesFactory() {
                 { title: 'Ancient Apparition: Ice Blast', icon: '../css/images/ability-icons/Ice-Blast.png', description: 'When hit with an Ice Blast, Alchemist cannot heal with his ultimate, making it difficult to push though fights and not get torn down.', },
                 { title: 'Stun', icon: '../css/images/ability-icons/stun.png', description: 'With enough lockdown and damage, Alchemist cannot escape to safely heal by activating his ultimate.', },
             ],
+            friends: [
+
+            ],
+            foes: [
+
+            ],
         },
         {
             name: 'Beastmaster',

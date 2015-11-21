@@ -73,8 +73,7 @@
 
 
 
-
-<!-- <div class = 'hero_profile'>{{ hero.name }}</div> -->
+<!-- hero profile -->
     <div id='profile_container' ng-show='profileVisible'>
         <div id = 'hero_profile' class='col-md-10'>
             <div id='close_profile' ng-click='closeProfile()'></div>
@@ -104,29 +103,34 @@
 
             <!-- http://dota2.gamepedia.com/Category:Ability_icons -->
 
-            <h3 class='profile_title'>
-                Strengths
-            </h3>
-            <ul id='profile_strengths' ng-repeat='strength in selectedHero.strengths' ng-mouseover='showDescription()' ng-mouseleave='hideDescription()'>
-                <li class='quality'>
-                    <img class='quality_icon' ng-src='{{ strength.icon }}'>
-                    <p class='quality_title'>
-                        {{ strength.title }}
-                    </p>
-                </li>
-                <span class='ability_description' ng-show='description' ng-hide='!description'>
-                    {{ strength.description }}
-                </span>
-            </ul>
-            <hr>
+            <div id='profile_strengths'>
+                <h3 class='profile_title'>
+                    Strengths
+                </h3>
+                <hr>
+                <ul id='friends' ng-repeat='strength in selectedHero.strengths' ng-mouseover='showDescription()' ng-mouseleave='hideDescription()'>
+                    <li class='quality'>
+                        <img class='quality_icon' ng-src='{{ strength.icon }}'>
+                        <p class='quality_title'>
+                            {{ strength.title }}
+                        </p>
+                    </li>
+                    <span class='ability_description' ng-show='description' ng-hide='!description'>
+                        {{ strength.description }}
+                    </span>
+                </ul>
+            </div>
 
-            <h3 class='profile_title'>
-                Weaknesses
-            </h3>
-            <ul id='profile_weaknesses' ng-repeat='weakness in selectedHero.weaknesses'>
-                <li class='quality'><img class='icon' ng-src='{{ weakness.icon }}'>
-                    {{ weakness.title }}
-                </li>
-            </ul>
+            <div id='profile_weaknesses'>
+                <h3 class='profile_title'>
+                    Weaknesses
+                </h3>
+                <hr>
+                <ul id='foes' ng-repeat='weakness in selectedHero.weaknesses'>
+                    <li class='quality'><img class='icon' ng-src='{{ weakness.icon }}'>
+                        {{ weakness.title }}
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>

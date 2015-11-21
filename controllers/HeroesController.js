@@ -2,7 +2,7 @@ dotaDraft.controller('HeroesCtrl', function HeroesCtrl($scope, HeroesFactory) {
 
     // $scope.strHeroes = HeroesFactory.strHeroes;
     // $scope.HeroesFactory = HeroesFactory;
-    
+
     $scope.radientStrHeroes = HeroesFactory.radientStrHeroes;
     $scope.direStrHeroes = HeroesFactory.direStrHeroes;
 
@@ -31,8 +31,9 @@ dotaDraft.controller('HeroesCtrl', function HeroesCtrl($scope, HeroesFactory) {
     $scope.showDescription = function() {
         $scope.description = true;
     };
-})
     //hides description of item
     $scope.hideDescription = function() {
         $scope.description = false;
     };
+
+});
