@@ -37,6 +37,7 @@
         margin-right: 2%;
     }
 
+
 /*hero grid*/
     /*holds all heros and keeps them in grid*/
     #strength_heroes, #agility_heroes, #intellegence_heroes {
@@ -169,14 +170,17 @@
         position: relative;
         border: solid 5px black;
         border-radius: 1%;
-        transform: scale(1.1);
-        /*margin-top: 1.2em;*/
-        margin-right: 1.5em;
+        transform: scale(1.9);
+        margin-top: 4%;
+        margin-right: 9%;
         clear: left;
     }
 
+    #playstyle_container {
+        width: 60%;
+    }
 
-    #playstyle{
+    #playstyle {
         position: relative;
         /*word-wrap: break-word;*/
         float: right;
@@ -187,7 +191,7 @@
 
     .quality {
         height: auto;
-        width: 15%;
+        width: 75%;
         padding: 1em;
         margin: 1em;
         list-style: none;
@@ -205,10 +209,12 @@
         z-index: 10;
     }
 
-
     .quality_icon {
-        transform: scale(.75);
-        margin: 0px;
+        width: 10em;
+        height: 10em;
+        object-fit: cover;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .quality_title {
@@ -216,13 +222,13 @@
         font-size: 16px;
     }
 
-    #profile_strengths {
-        width: 45%;
+    #profile_friends {
+        width: 47.5%;
         float: left;
     }
 
-    #profile_weaknesses {
-        width: 45%;
+    #profile_foes {
+        width: 47.5%;
         float: right;
     }
 
@@ -233,7 +239,6 @@
         position: relative;
         margin: 0px;
         padding: 0px;
-        margin: 0px;
         border: none;
         justify-content: center;
     }
@@ -242,49 +247,26 @@
         color: black;
         height: 40px;
         width: 40px;
-        background-color: grey;
+        /*background-color: red;*/
         float: right;
-        margin-top: -44px;
-        margin-right: -30px;
+        margin-top: -50px;
+        margin-right: -35px;
         cursor: pointer;
-        border: 1px solid black;
-        border-radius: 100%;
+        /*border: 1px solid black;
+        border-radius: 100%;*/
         display: inline-block;
         align-items: center;
         text-align:center;
         line-height:40px;
-        width:40px;
+        position: relative;
+        z-index: 500;
     }
 
     #close_profile:before {
         content: 'x';
-        font-size: 40px;
+        font-size: 50px;
         font-weight: bold;
     }
-
-
-
-    /*.sidebar {
-        position:fixed;
-        float: left;
-        background-color: #503D3F;
-        margin-left: 700px;
-        height: 100%;
-        width: auto;
-    }
-
-    .hero_slot {
-        height: 150px;
-        width: 150px;
-        background-color: white;
-        border: 2px solid black;
-        position: relative;
-    }
-    .hero_slot p {
-        top: 50%;
-        left: 50%;
-        margin-right: -50%;
-    }*/
 
 /*effects and animation*/
     /*portriat grow on hover in hero grid*/
