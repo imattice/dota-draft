@@ -110,14 +110,14 @@
                     Friends
                 </h3>
                 <hr>
-                <ul id='friends' ng-repeat='friend in selectedHero.friends' ng-mouseover='showDescription()' ng-mouseleave='hideDescription()'>
+                <ul id='friends' ng-repeat='quality in selectedHero.friends' ng-mouseover='showDescription(quality)' ng-mouseleave='hideDescription()'>
                     <li class='quality'>
-                        <img class='quality_icon' ng-src='{{ friend.icon }}'>
+                        <img class='quality_icon' ng-src='{{ quality.icon }}'>
                         <p class='quality_title'>
-                            {{ friend.name }}
+                            {{ quality.name }}
                         </p>
                         <span class='ability_description' ng-show='description' ng-hide='!description'>
-                            {{ friend.description }}
+                            {{ quality.description }}
                         </span>
                     </li>
                 </ul>
@@ -129,14 +129,14 @@
                     Foes
                 </h3>
                 <hr>
-                <ul id='friends' ng-repeat='foe in selectedHero.foes' ng-mouseover='showDescription()' ng-mouseleave='hideDescription()'>
+                <ul id='friends' ng-repeat='quality in selectedHero.foes' ng-mouseover='showDescription(foe)' ng-mouseleave='hideDescription()'>
                     <li class='quality'>
-                        <img class='quality_icon' ng-src='{{ foe.icon }}'>
+                        <img class='quality_icon' ng-src='{{ quality.icon }}'>
                         <p class='quality_title'>
-                            {{ foe.name }}
+                            {{ quality.name }}
                         </p>
                         <span class='ability_description' ng-show='description' ng-hide='!description'>
-                            {{ foe.description }}
+                            {{ quality.description }}
                         </span>
                     </li>
                 </ul>
