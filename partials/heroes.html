@@ -1,0 +1,143 @@
+<!--  Strength -->
+        <div id='strength_heroes'>
+    <!-- Radient -->
+        <!-- container for grid -->
+            <div class='hero_grid'>
+                <h2 class='grid_title'>Strength Heroes</h2>
+                <hr>
+
+                <!-- add each hero into a seperate column.  Resizes pictures. -->
+                <div class = 'col-sm-2 portriat-resize' ng-class='{ desaturated: profileVisible}' ng-repeat='hero in radientStrHeroes'>
+                    <!-- placeholder so the grid does not move on animation -->
+                    <div class = 'hero_placeholder'>
+                        <!-- groups the name and the picture together -->
+                        <div class = 'hero_container' ng-click='openProfile(hero)' grow>
+                            <!-- hero picture -->
+                            <img class = 'hero_portriat' ng-src = '{{ hero.portriat }}'>
+                            <!-- hero name -->
+                            <p class = 'hero_name'>{{ hero.name }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+
+    <!-- Dire  -->
+            <div class='container col-md-10 hero_grid'>
+                <div class = 'col-sm-2 portriat-resize' ng-repeat='hero in direStrHeroes'>
+                        <img class = 'hero_portriat' ng-src = '{{ hero.portriat }}'>
+                        <p class = 'hero_name'>{{ hero.name }}</p>
+                </div>
+            </div>
+        </div>
+
+<!-- Agility -->
+    <div id='agility_heroes'>
+    <!-- Radient -->
+        <div class='container col-md-10 hero_grid'>
+            <h2 class='grid_title'>Agility Heroes</h2>
+            <hr>
+            <div class = 'col-sm-2 portriat-resize' ng-repeat='hero in radientAgiHeroes'>
+                    <img class = 'hero_portriat' ng-src = '{{ hero.portriat }}'>
+                    <p class = 'hero_name'>{{ hero.name }}</p>
+            </div>
+        </div>
+    <!-- Dire  -->
+        <div class='container col-md-10 hero_grid'>
+            <div class = 'col-sm-2 portriat-resize' ng-repeat='hero in direAgiHeroes'>
+                    <img class = 'hero_portriat' ng-src = '{{ hero.portriat }}'>
+                    <p class = 'hero_name'>{{ hero.name }}</p>
+            </div>
+        </div>
+    </div>
+
+<!-- Intellegence -->
+    <div id='intellegence_heroes'>
+    <!-- Radient -->
+        <div class='container col-md-10 hero_grid'>
+            <h2 class='grid_title'>Intellegence Heroes</h2>
+            <hr>
+            <div class = 'col-sm-2 portriat-resize' ng-repeat='hero in radientIntHeroes'>
+                    <img class = 'hero_portriat' ng-src = '{{ hero.portriat }}'>
+                    <p class = 'hero_name'>{{ hero.name }}</p>
+            </div>
+        </div>
+    <!-- Dire  -->
+        <div class='container col-md-10 hero_grid'>
+            <div class = 'col-sm-2 portriat-resize' ng-repeat='hero in direIntHeroes'>
+                    <img class = 'hero_portriat' ng-src = '{{ hero.portriat }}'>
+                    <p class = 'hero_name'>{{ hero.name }}</p>
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- hero profile -->
+    <div id='profile_container' ng-show='profileVisible'>
+        <div id = 'hero_profile' class='col-md-10'>
+            <div id='close_profile' ng-click='closeProfile()'></div>
+
+            <img id='profile_portriat' ng-src='{{ selectedHero.portriat }}'>
+            <div id='profile_title'>
+                <h1 id='profile_name'>
+                    {{ selectedHero.name }}
+                </h1>
+                <br />
+
+                <ul id='profile_roles' ng-repeat='role in selectedHero.roles'>
+                    <li>
+                        {{ role }}
+                    </li>
+                </ul>
+                <hr>
+            </div>
+
+            <div id='playstyle_container'>
+                <h3  class='profile_title'>
+                    Playstyle
+                </h3>
+                <p id='playstyle'>
+                    {{ selectedHero.playstyle }}
+                </p>
+            </div>
+            <!-- <hr> -->
+
+            <!-- http://dota2.gamepedia.com/Category:Ability_icons -->
+
+            <div id='profile_friends'>
+                <h3 class='profile_title'>
+                    Friends
+                </h3>
+                <hr>
+                <ul id='friends' ng-repeat='quality in selectedHero.friends' ng-mouseover='showDescription(quality)' ng-mouseleave='hideDescription()'>
+                    <li class='quality'>
+                        <img class='quality_icon' ng-src='{{ quality.icon }}'>
+                        <p class='quality_title'>
+                            {{ quality.name }}
+                        </p>
+                        <span class='ability_description' ng-show='description' ng-hide='!description'>
+                            {{ quality.description }}
+                        </span>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div id='profile_foes'>
+                <h3 class='profile_title'>
+                    Foes
+                </h3>
+                <hr>
+                <ul id='friends' ng-repeat='quality in selectedHero.foes' ng-mouseover='showDescription(foe)' ng-mouseleave='hideDescription()'>
+                    <li class='quality'>
+                        <img class='quality_icon' ng-src='{{ quality.icon }}'>
+                        <p class='quality_title'>
+                            {{ quality.name }}
+                        </p>
+                        <span class='ability_description' ng-show='description' ng-hide='!description'>
+                            {{ quality.description }}
+                        </span>
+                    </li>
+                </ul>
+            </div>
