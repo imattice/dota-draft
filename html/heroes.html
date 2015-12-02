@@ -19,57 +19,71 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <br />
 
     <!-- Dire  -->
-            <div class='container col-md-10 hero_grid'>
-                <div class = 'col-sm-2 portriat-resize' ng-repeat='hero in direStrHeroes'>
-                        <img class = 'hero_portriat' ng-src = '{{ hero.portriat }}'>
-                        <p class = 'hero_name'>{{ hero.name }}</p>
+                <div class = 'col-sm-2 portriat-resize' ng-class='{ desaturated: profileVisible}' ng-repeat='hero in direStrHeroes'>
+                    <div class = 'hero_placeholder'>
+                        <div class = 'hero_container' ng-click='openProfile(hero)' grow>
+                            <img class = 'hero_portriat' ng-src = '{{ hero.portriat }}'>
+                            <p class = 'hero_name'>{{ hero.name }}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    <br />
 
 <!-- Agility -->
-    <div id='agility_heroes'>
-    <!-- Radient -->
-        <div class='container col-md-10 hero_grid'>
-            <h2 class='grid_title'>Agility Heroes</h2>
-            <hr>
-            <div class = 'col-sm-2 portriat-resize' ng-repeat='hero in radientAgiHeroes'>
+<div id='agility_heroes'>
+    <div class='hero_grid'>
+        <h2 class='grid_title'>Agility Heroes</h2>
+        <hr>
+        <div class = 'col-sm-2 portriat-resize' ng-class='{ desaturated: profileVisible}' ng-repeat='hero in radientAgiHeroes'>
+            <div class = 'hero_placeholder'>
+                <div class = 'hero_container' ng-click='openProfile(hero)' grow>
                     <img class = 'hero_portriat' ng-src = '{{ hero.portriat }}'>
                     <p class = 'hero_name'>{{ hero.name }}</p>
+                </div>
             </div>
         </div>
-    <!-- Dire  -->
-        <div class='container col-md-10 hero_grid'>
-            <div class = 'col-sm-2 portriat-resize' ng-repeat='hero in direAgiHeroes'>
+<!-- Dire  -->
+        <div class = 'col-sm-2 portriat-resize' ng-class='{ desaturated: profileVisible}' ng-repeat='hero in direAgiHeroes'>
+            <div class = 'hero_placeholder'>
+                <div class = 'hero_container' ng-click='openProfile(hero)' grow>
                     <img class = 'hero_portriat' ng-src = '{{ hero.portriat }}'>
                     <p class = 'hero_name'>{{ hero.name }}</p>
+                </div>
             </div>
         </div>
     </div>
+</div>
+<br />
 
 <!-- Intellegence -->
-    <div id='intellegence_heroes'>
-    <!-- Radient -->
-        <div class='container col-md-10 hero_grid'>
-            <h2 class='grid_title'>Intellegence Heroes</h2>
-            <hr>
-            <div class = 'col-sm-2 portriat-resize' ng-repeat='hero in radientIntHeroes'>
+<div id='intellegence_heroes'>
+    <div class='hero_grid'>
+        <h2 class='grid_title'>Intellegence Heroes</h2>
+        <hr>
+        <div class = 'col-sm-2 portriat-resize' ng-class='{ desaturated: profileVisible}' ng-repeat='hero in radientIntHeroes'>
+            <div class = 'hero_placeholder'>
+                <div class = 'hero_container' ng-click='openProfile(hero)' grow>
                     <img class = 'hero_portriat' ng-src = '{{ hero.portriat }}'>
                     <p class = 'hero_name'>{{ hero.name }}</p>
+                </div>
             </div>
         </div>
-    <!-- Dire  -->
-        <div class='container col-md-10 hero_grid'>
-            <div class = 'col-sm-2 portriat-resize' ng-repeat='hero in direIntHeroes'>
+<!-- Dire  -->
+        <div class = 'col-sm-2 portriat-resize' ng-class='{ desaturated: profileVisible}' ng-repeat='hero in direIntHeroes'>
+            <div class = 'hero_placeholder'>
+                <div class = 'hero_container' ng-click='openProfile(hero)' grow>
                     <img class = 'hero_portriat' ng-src = '{{ hero.portriat }}'>
                     <p class = 'hero_name'>{{ hero.name }}</p>
+                </div>
             </div>
         </div>
     </div>
+</div>
+<br />
 
 
 

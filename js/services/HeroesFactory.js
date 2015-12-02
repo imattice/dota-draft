@@ -3,7 +3,7 @@ dotaDraft.factory('HeroesFactory', function HeroesFactory() {
     factory.radientStrHeroes = [
         {
             name: 'Alchemist',
-            portriat: 'imattice.github.io/dota-draft/css/images/Str/Radient/Alchemist.png',
+            portriat: '../css/images/Str/Radient/Alchemist.png',
             gif: '',
             roles: [
                 'Carry',

@@ -30,6 +30,7 @@
         float: left;
         position: relative;
         margin-left: 2%;
+        color: black;
     }
 
     #searchbar {
@@ -47,22 +48,24 @@
 /*hero grid*/
     /*holds all heros and keeps them in grid*/
     #strength_heroes, #agility_heroes, #intellegence_heroes {
-        width: 30%;
+        width: 32%;
         height: auto;
-        position: relative;
-        margin: 1%;
+        position: absolute;
+        /*margin: 1%;*/
+        /*display: block;*/
+        top: 12%;
     }
 
     #strength_heroes{
-        float: left;
+        left: 1%;
     }
 
     #agility_heroes{
-        float: left;
+        left: 34%;
     }
 
     #intellegence_heroes{
-        float: right;
+        left: 67%;
     }
 
     .hero_grid {
@@ -137,18 +140,17 @@
 
     /*div that holds all profile information*/
     #hero_profile {
-       width: 70%;
+       width: 90%;
        height: auto;
        padding: 2em;
        padding-top: 3em;
-       margin-left: 1%;
        vertical-align: middle;
        position: fixed;
        background-color: white;
        z-index: 6;
        border-radius: 5px;
        overflow: scroll;
-       margin-left: 15%;
+       margin-left: 5%;
     }
 
     #profile_title {
@@ -176,7 +178,7 @@
         position: relative;
         border: solid 5px black;
         border-radius: 1%;
-        transform: scale(1.9);
+        transform: scale(1.8);
         margin-top: 4%;
         margin-right: 9%;
         clear: left;
@@ -219,8 +221,8 @@
         width: 10em;
         height: 10em;
         object-fit: cover;
-        margin-left: auto;
-        margin-right: auto;
+        /*margin-left: auto;
+        margin-right: auto;*/
     }
 
     .quality_title {
@@ -241,7 +243,6 @@
     #friends, #foes {
         /*width: 15%;*/
         float: left;
-        /*display: inline-block;*/
         position: relative;
         margin: 0px;
         padding: 0px;
@@ -253,13 +254,10 @@
         color: black;
         height: 40px;
         width: 40px;
-        /*background-color: red;*/
         float: right;
         margin-top: -50px;
         margin-right: -35px;
         cursor: pointer;
-        /*border: 1px solid black;
-        border-radius: 100%;*/
         display: inline-block;
         align-items: center;
         text-align:center;
