@@ -1,0 +1,56 @@
+<!-- <div class = 'hero_profile'>{{ hero.name }}</div> -->
+    <div id='profile_container' ng-show='profileVisible'>
+        <div id = 'hero_profile' class='col-md-10'>
+            <div id='close_profile' ng-click='closeProfile()'></div>
+
+            <img id='profile_portriat' ng-src='{{ selectedHero.portriat }}'>
+            <div id='profile_title'>
+                <h1 id='profile_name'>
+                    {{ selectedHero.name }}
+                </h1>
+                <br />
+
+                <ul id='profile_roles' ng-repeat='role in selectedHero.roles'>
+                    <li>
+                        {{ role }}
+                    </li>
+                </ul>
+                <hr>
+            </div>
+
+            <h3  class='profile_title'>
+                Playstyle
+            </h3>
+            <p id='playstyle'>
+                {{ selectedHero.playstyle }}
+            </p>
+            <hr>
+
+            <!-- http://dota2.gamepedia.com/Category:Ability_icons -->
+
+            <h3 class='profile_title'>
+                Strengths
+            </h3>
+            <ul id='profile_strengths' ng-repeat='strength in selectedHero.strengths' ng-mouseover='showDescription()' ng-mouseleave='hideDescription()'>
+                <li class='quality'>
+                    <img class='quality_icon' ng-src='{{ strength.icon }}'>
+                    <p class='quality_title'>
+                        {{ strength.title }}
+                    </p>
+                </li>
+                <span class='ability_description' ng-show='description' ng-hide='!description'>
+                    {{ strength.description }}
+                </span>
+            </ul>
+            <hr>
+
+            <h3 class='profile_title'>
+                Weaknesses
+            </h3>
+            <ul id='profile_weaknesses' ng-repeat='weakness in selectedHero.weaknesses'>
+                <li class='quality'><img class='icon' ng-src='{{ weakness.icon }}'>
+                    {{ weakness.title }}
+                </li>
+            </ul>
+        </div>
+    </div>

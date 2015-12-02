@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang='en' ng-app='dotaDraft'>
+    <head>
+        <meta charset='utf-8'>
+        <title>DOTA Drafter</title>
+
+        <script src='https://code.jquery.com/jquery-2.1.4.min.js'></script>
+        <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js'></script>
+        <script src='js/scripts.js'></script>
+        <script src='app.js'></script>
+
+        <script src='js/services/HeroesFactory.js'></script>
+        <script src='js/controllers/HeroesController.js'></script>
+
+        <script src='js/directives/customDirectives.js'></script>
+
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+        <link rel='stylesheet' href='css/styles.css'>
+    </head>
+
+    <body>
+        <div ui-view='header'  ng-click='closeProfile()'></div>
+        <div ui-view='heroes' resaturate></div>
+        <!-- <div ui-view='sidebar'></div> -->
+        <div ui-view='profile'></div>
+    </body>
+
+</html>

@@ -1,0 +1,301 @@
+@@font-face {
+    font-family: title-font;
+    src: url('fonts/title.ttf');
+}
+
+/*entire page styling*/
+    body {
+        height: 100%;
+        width: 100%;
+        padding-top: 50px;
+        background-color: #050609;
+        color: #706563;
+        margin-right: -100px;
+    }
+
+/*header*/
+    .header {
+        height:auto;
+        width: 100%;
+        position: fixed;
+        top: 0px;
+        background-color: #52050A;
+        display: inline-block;
+    }
+
+    #title {
+        font-size: 4em;
+        font-weight: bolder;
+        font-family: title-font;
+        float: left;
+        position: relative;
+        margin-left: 2%;
+        color: black;
+    }
+
+    #searchbar {
+        width: 25%;
+        /*font-size: 25px;*/
+        border-radius: 50px;
+        display: inline-block;
+        position: relative;
+        float: right;
+        margin-top: 1.25%;
+        margin-right: 2%;
+    }
+
+
+/*hero grid*/
+    /*holds all heros and keeps them in grid*/
+    #strength_heroes, #agility_heroes, #intellegence_heroes {
+        width: 32%;
+        height: auto;
+        position: absolute;
+        /*margin: 1%;*/
+        /*display: block;*/
+        top: 12%;
+    }
+
+    #strength_heroes{
+        left: 1%;
+    }
+
+    #agility_heroes{
+        left: 34%;
+    }
+
+    #intellegence_heroes{
+        left: 67%;
+    }
+
+    .hero_grid {
+        width: 100%;
+        height: auto;
+        float: left;
+   }
+
+   .grid_title{
+       margin: .25%;
+       margin-top: 0px;
+   }
+
+    /*holds prortriat and name*/
+    .hero_container {
+        margin: 0;
+    }
+
+    /*picture of hero for grid*/
+    .hero_portriat {
+        height: auto;
+        width: 100%;
+        margin: .25%;
+        border: 1.5px solid black;
+        border-radius: 5%;
+        position: relative;
+        float: left;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .portriat-resize {
+        padding: 0.75%;
+        width: 24%;
+        height: auto;
+    }
+
+    /*hero name for grid*/
+    .hero_name {
+        color: white;
+        font-weight:bold;
+        font-size: 10px;
+        text-shadow: 2px 2px black;
+        position: absolute;
+        display:flex;
+        justify-content:center;
+        width:100%;
+        z-index: 5;
+        margin-top: 45%;
+    }
+
+    /*holds place in grid on animation*/
+    .hero_placeholder {
+        margin:30px auto;
+        /* How pronounced should the 3D effects be */
+        perspective: 500;
+        width: 100%;
+        height:auto;
+        position:relative;
+        cursor:pointer;
+        background-color: black;
+        margin: 0;
+    }
+
+/*profile*/
+    #profile_container {
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        /*overflow: scroll;*/
+    }
+
+    /*div that holds all profile information*/
+    #hero_profile {
+       width: 90%;
+       height: auto;
+       padding: 2em;
+       padding-top: 3em;
+       vertical-align: middle;
+       position: fixed;
+       background-color: white;
+       z-index: 6;
+       border-radius: 5px;
+       overflow: scroll;
+       margin-left: 5%;
+    }
+
+    #profile_title {
+        width: 60%;
+        height: auto;
+        text-align: center;
+    }
+
+        #profile_name {
+            font-size: 50px;
+            font-weight: bold;
+            display: inline;
+       }
+
+        #profile_roles {
+            font-size: 15px;
+            display:inline-block;
+            list-style: none;
+            padding: 10px 20px 0px 20px;
+        }
+
+    #profile_portriat {
+        display: inline-block;
+        float: right;
+        position: relative;
+        border: solid 5px black;
+        border-radius: 1%;
+        transform: scale(1.8);
+        margin-top: 4%;
+        margin-right: 9%;
+        clear: left;
+    }
+
+    #playstyle_container {
+        width: 60%;
+    }
+
+    #playstyle {
+        position: relative;
+        /*word-wrap: break-word;*/
+        float: right;
+        margin: 1em;
+        display: inline-block;
+        margin-top: 1px;
+    }
+
+    .quality {
+        height: auto;
+        width: 75%;
+        padding: 1em;
+        margin: 1em;
+        list-style: none;
+        position: relative;
+    }
+
+    .ability_description {
+        width: 400px;
+        height: auto;
+        background-color: white;
+        border: solid black 1px;
+        padding: 3px;
+        border-radius: 5px;
+        position: absolute;
+        z-index: 10;
+    }
+
+    .quality_icon {
+        width: 10em;
+        height: 10em;
+        object-fit: cover;
+        /*margin-left: auto;
+        margin-right: auto;*/
+    }
+
+    .quality_title {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    #profile_friends {
+        width: 47.5%;
+        float: left;
+    }
+
+    #profile_foes {
+        width: 47.5%;
+        float: right;
+    }
+
+    #friends, #foes {
+        /*width: 15%;*/
+        float: left;
+        position: relative;
+        margin: 0px;
+        padding: 0px;
+        border: none;
+        justify-content: center;
+    }
+
+    #close_profile {
+        color: black;
+        height: 40px;
+        width: 40px;
+        float: right;
+        margin-top: -50px;
+        margin-right: -35px;
+        cursor: pointer;
+        display: inline-block;
+        align-items: center;
+        text-align:center;
+        line-height:40px;
+        position: relative;
+        z-index: 500;
+    }
+
+    #close_profile:before {
+        content: 'x';
+        font-size: 50px;
+        font-weight: bold;
+    }
+
+/*effects and animation*/
+    /*portriat grow on hover in hero grid*/
+    .grow {
+        transition: .1s;
+        -webkit-transform: scale(1.4);
+        -moz-transform: scale(1.4);
+        -o-transform: scale(1.4);
+        position: relative;
+        z-index: 5;
+    }
+
+    /*removes color from grid when searchbar and profile is clicked*/
+    .desaturated {
+        /*-webkit-transition: 2s;*/
+        transition: .2s;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+    }
+
+    .desaturated:hover{
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -o-transform: scale(1);
+        position: relative;
+        z-index: 5;
+        pointer-events: none;
+    }
