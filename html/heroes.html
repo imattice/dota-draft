@@ -1,37 +1,37 @@
 <!--  Strength -->
-        <div id='strength_heroes'>
+<div id='strength_heroes'>
     <!-- Radient -->
-        <!-- container for grid -->
-            <div class='hero_grid'>
-                <h2 class='grid_title'>Strength Heroes</h2>
-                <hr>
+    <!-- container for grid -->
+    <div class='hero_grid'>
+        <h2 class='grid_title'>Strength Heroes</h2>
+        <hr>
 
-                <!-- add each hero into a seperate column.  Resizes pictures. -->
-                <div class = 'col-sm-2 portriat-resize' ng-class='{ desaturated: profileVisible}' ng-repeat='hero in radientStrHeroes'>
-                    <!-- placeholder so the grid does not move on animation -->
-                    <div class = 'hero_placeholder'>
-                        <!-- groups the name and the picture together -->
-                        <div class = 'hero_container' ng-click='openProfile(hero)' grow>
-                            <!-- hero picture -->
-                            <img class = 'hero_portriat' ng-src = '{{ hero.portriat }}'>
-                            <!-- hero name -->
-                            <p class = 'hero_name'>{{ hero.name }}</p>
-                        </div>
-                    </div>
-                </div>
-
-    <!-- Dire  -->
-                <div class = 'col-sm-2 portriat-resize' ng-class='{ desaturated: profileVisible}' ng-repeat='hero in direStrHeroes'>
-                    <div class = 'hero_placeholder'>
-                        <div class = 'hero_container' ng-click='openProfile(hero)' grow>
-                            <img class = 'hero_portriat' ng-src = '{{ hero.portriat }}'>
-                            <p class = 'hero_name'>{{ hero.name }}</p>
-                        </div>
-                    </div>
+        <!-- add each hero into a seperate column.  Resizes pictures. -->
+        <div class = 'col-sm-2 portriat-resize' ng-class='{ desaturated: profileVisible}' ng-repeat='hero in radientStrHeroes'>
+            <!-- placeholder so the grid does not move on animation -->
+            <div class = 'hero_placeholder'>
+                <!-- groups the name and the picture together -->
+                <div class = 'hero_container' ng-click='openProfile(hero)' grow>
+                    <!-- hero picture -->
+                    <img class = 'hero_portriat' ng-src = '{{ hero.portriat }}'>
+                    <!-- hero name -->
+                    <p class = 'hero_name'>{{ hero.name }}</p>
                 </div>
             </div>
         </div>
-    <br />
+
+        <!-- Dire  -->
+        <div class = 'col-sm-2 portriat-resize' ng-class='{ desaturated: profileVisible}' ng-repeat='hero in direStrHeroes'>
+            <div class = 'hero_placeholder'>
+                <div class = 'hero_container' ng-click='openProfile(hero)' grow>
+                <img class = 'hero_portriat' ng-src = '{{ hero.portriat }}'>
+                <p class = 'hero_name'>{{ hero.name }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
 
 <!-- Agility -->
 <div id='agility_heroes'>
@@ -46,7 +46,6 @@
                 </div>
             </div>
         </div>
-<!-- Dire  -->
         <div class = 'col-sm-2 portriat-resize' ng-class='{ desaturated: profileVisible}' ng-repeat='hero in direAgiHeroes'>
             <div class = 'hero_placeholder'>
                 <div class = 'hero_container' ng-click='openProfile(hero)' grow>
@@ -72,7 +71,6 @@
                 </div>
             </div>
         </div>
-<!-- Dire  -->
         <div class = 'col-sm-2 portriat-resize' ng-class='{ desaturated: profileVisible}' ng-repeat='hero in direIntHeroes'>
             <div class = 'hero_placeholder'>
                 <div class = 'hero_container' ng-click='openProfile(hero)' grow>
@@ -86,72 +84,74 @@
 <br />
 
 
+<!-- TODO: move profile to new HTML partial and maintain functionality -->
 
 <!-- hero profile -->
-    <div id='profile_container' ng-show='profileVisible'>
-        <div id = 'hero_profile' class='col-md-10'>
-            <div id='close_profile' ng-click='closeProfile()'></div>
+<div id='profile_container' ng-show='profileVisible'>
+    <div id = 'hero_profile' class='col-md-10'>
+        <div id='close_profile' ng-click='closeProfile()'></div>
 
-            <img id='profile_portriat' ng-src='{{ selectedHero.portriat }}'>
-            <div id='profile_title'>
-                <h1 id='profile_name'>
-                    {{ selectedHero.name }}
-                </h1>
-                <br />
+        <img id='profile_portriat' ng-src='{{ selectedHero.portriat }}'>
+        <div id='profile_title'>
+            <h1 id='profile_name'>
+            {{ selectedHero.name }}
+            </h1>
+            <br />
 
-                <ul id='profile_roles' ng-repeat='role in selectedHero.roles'>
-                    <li>
-                        {{ role }}
-                    </li>
-                </ul>
-                <hr>
-            </div>
+            <ul id='profile_roles' ng-repeat='role in selectedHero.roles'>
+                <li>
+                {{ role }}
+                </li>
+            </ul>
+            <hr>
+        </div>
 
-            <div id='playstyle_container'>
-                <h3  class='profile_title'>
-                    Playstyle
-                </h3>
-                <p id='playstyle'>
-                    {{ selectedHero.playstyle }}
-                </p>
-            </div>
-            <!-- <hr> -->
+        <div id='playstyle_container'>
+            <h3  class='profile_title'>
+            Playstyle
+            </h3>
+            <p id='playstyle'>
+            {{ selectedHero.playstyle }}
+            </p>
+        </div>
 
-            <!-- http://dota2.gamepedia.com/Category:Ability_icons -->
+        <div id='profile_friends'>
+            <h3 class='profile_title'>
+            Friends
+            </h3>
+            <hr>
+            <ul id='friends' ng-repeat='quality in selectedHero.friends' ng-mouseover='showDescription(quality)' ng-mouseleave='hideDescription()'>
+                <li class='quality'>
+                    <img class='quality_icon' ng-src='{{ quality.icon }}'>
+                    <p class='quality_title'>
+                    {{ quality.name }}
+                    </p>
 
-            <div id='profile_friends'>
-                <h3 class='profile_title'>
-                    Friends
-                </h3>
-                <hr>
-                <ul id='friends' ng-repeat='quality in selectedHero.friends' ng-mouseover='showDescription(quality)' ng-mouseleave='hideDescription()'>
-                    <li class='quality'>
-                        <img class='quality_icon' ng-src='{{ quality.icon }}'>
-                        <p class='quality_title'>
-                            {{ quality.name }}
-                        </p>
-                        <span class='ability_description' ng-show='description' ng-hide='!description'>
-                            {{ quality.description }}
-                        </span>
-                    </li>
-                </ul>
-            </div>
+<!-- TODO: only show description of the icon that is being hovered over -->
+                    <span class='ability_description' ng-show='description' ng-hide='!description'>
+                    {{ quality.description }}
+                    </span>
+                </li>
+            </ul>
+        </div>
 
 
-            <div id='profile_foes'>
-                <h3 class='profile_title'>
-                    Foes
-                </h3>
-                <hr>
-                <ul id='friends' ng-repeat='quality in selectedHero.foes' ng-mouseover='showDescription(foe)' ng-mouseleave='hideDescription()'>
-                    <li class='quality'>
-                        <img class='quality_icon' ng-src='{{ quality.icon }}'>
-                        <p class='quality_title'>
-                            {{ quality.name }}
-                        </p>
-                        <span class='ability_description' ng-show='description' ng-hide='!description'>
-                            {{ quality.description }}
-                        </span>
-                    </li>
-                </ul>
-            </div>
+        <div id='profile_foes'>
+            <h3 class='profile_title'>
+            Foes
+            </h3>
+            <hr>
+            <ul id='friends' ng-repeat='quality in selectedHero.foes' ng-mouseover='showDescription(foe)' ng-mouseleave='hideDescription()'>
+                <li class='quality'>
+                    <img class='quality_icon' ng-src='{{ quality.icon }}'>
+                    <p class='quality_title'>
+                    {{ quality.name }}
+                    </p>
+                    <span class='ability_description' ng-show='description' ng-hide='!description'>
+                    {{ quality.description }}
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
