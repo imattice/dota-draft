@@ -5,21 +5,21 @@ dotaDraft.config(function($stateProvider, $urlRouterProvider){
         url:'',
         views: {
             'header': {
-                templateUrl:'partials/header.html',
+                templateUrl:'html/header.html',
                 controller: 'HeroesCtrl',
             },
             'heroes': {
                 url: '',
-                templateUrl:'partials/heroes.html',
+                templateUrl:'html/heroes.html',
                 controller: 'HeroesCtrl',
             },
             // 'sidebar': {
             //     url: '',
-            //     templateUrl: 'partials/team_builder_sidebar.html',
+            //     templateUrl: 'html/team_builder_sidebar.html',
             //     // controller: 'HeroesCtrl',
             // },
             'profile': {
-                templateUrl:'partials/profile.html',
+                templateUrl:'html/profile.html',
                 controller: 'HeroesCtrl',
             },
         }
