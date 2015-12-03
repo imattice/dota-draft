@@ -33,4 +33,10 @@ dotaDraft.controller('HeroesCtrl', function HeroesCtrl($scope, HeroesFactory) {
         this.details = false;
     };
 
+    // search
+    // $scope.search = {};
+    // $scope.setSearch = function() {
+    //   var searchBy = $scope.search.value;
+    // }
+
 });
