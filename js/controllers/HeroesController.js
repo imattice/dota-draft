@@ -25,14 +25,18 @@ dotaDraft.controller('HeroesCtrl', function HeroesCtrl($scope, HeroesFactory) {
     };
 
     //shows description of item
-    $scope.showDescription = function(quality) {
-        $scope.description = true;
-
-        $scope.selectedQuality = quality;
+    $scope.showDetails = function(quality) {
+        this.details = true;
     };
     //hides description of item
-    $scope.hideDescription = function() {
-        $scope.description = false;
+    $scope.hideDetails = function() {
+        this.details = false;
     };
+
+    // search
+    // $scope.search = {};
+    // $scope.setSearch = function() {
+    //   var searchBy = $scope.search.value;
+    // }
 
 });

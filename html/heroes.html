@@ -11,7 +11,7 @@
             <!-- placeholder so the grid does not move on animation -->
             <div class = 'hero_placeholder'>
                 <!-- groups the name and the picture together -->
-                <div class = 'hero_container' ng-click='openProfile(hero)' grow>
+                <div class = 'hero_container' ng-click='openProfile(hero)' ng-class='{ grow: search }' grow>
                     <!-- hero picture -->
                     <img class = 'hero_portriat' ng-src = '{{ hero.portriat }}'>
                     <!-- hero name -->
@@ -89,6 +89,7 @@
 <!-- hero profile -->
 <div id='profile_container' ng-show='profileVisible'>
     <div id = 'hero_profile' class='col-md-10'>
+      <!-- TODO: allow user to close profile by clicking outside of profile -->
         <div id='close_profile' ng-click='closeProfile()'></div>
 
         <img id='profile_portriat' ng-src='{{ selectedHero.portriat }}'>
@@ -122,13 +123,11 @@
             <hr>
             <ul id='friends' ng-repeat='quality in selectedHero.friends' ng-mouseover='showDescription(quality)' ng-mouseleave='hideDescription()'>
                 <li class='quality'>
-                    <img class='quality_icon' ng-src='{{ quality.icon }}'>
+                    <img class='quality_icon' ng-src='{{ quality.icon }}'  ng-mouseover='showDetails()' ng-mouseleave='hideDetails()'>
                     <p class='quality_title'>
                     {{ quality.name }}
                     </p>
-
-<!-- TODO: only show description of the icon that is being hovered over -->
-                    <span class='ability_description' ng-show='description' ng-hide='!description'>
+                    <span class='ability_description' ng-show='details'>
                     {{ quality.description }}
                     </span>
                 </li>
@@ -143,11 +142,11 @@
             <hr>
             <ul id='friends' ng-repeat='quality in selectedHero.foes' ng-mouseover='showDescription(foe)' ng-mouseleave='hideDescription()'>
                 <li class='quality'>
-                    <img class='quality_icon' ng-src='{{ quality.icon }}'>
+                    <img class='quality_icon' ng-src='{{ quality.icon }}' ng-src='{{ quality.icon }}'  ng-mouseover='showDetails()' ng-mouseleave='hideDetails()'>
                     <p class='quality_title'>
                     {{ quality.name }}
                     </p>
-                    <span class='ability_description' ng-show='description' ng-hide='!description'>
+                    <span class='ability_description' ng-show='details'>
                     {{ quality.description }}
                     </span>
                 </li>
